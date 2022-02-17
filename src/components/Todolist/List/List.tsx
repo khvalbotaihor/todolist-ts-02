@@ -1,23 +1,17 @@
 import React from 'react';
 import styles from './style.module.css';
+import {Task} from "./Task/Task";
+import {TaskType} from "../../../App";
 
-export function List() {
+type ListType = {
+    tasks: TaskType[]
+}
+
+export function List(props: ListType) {
     return <div className={styles.list}>
-        <div className={styles.task}>
-            <input type="checkbox" checked={true}/>
-            <span>CSS</span>
-        </div>
-        <div className={styles.task}>
-            <input type="checkbox" checked={false}/>
-            <span>JS</span>
-        </div>
-        <div className={styles.task}>
-            <input type="checkbox" checked={false}/>
-            <span>ReactJS</span>
-        </div>
-        <div className={styles.task}>
-            <input type="checkbox" checked={true}/>
-            <span>Patterns</span>
-        </div>
+        {
+            props.tasks.map((el,index) => <Task isDone={el.isDone} title={el.title} key={index}/>)
+        }
     </div>
 }
+

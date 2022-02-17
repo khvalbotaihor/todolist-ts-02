@@ -2,9 +2,13 @@ import React from 'react';
 import Input from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 
-function Header() {
+type HeaderType = {
+    title: string
+}
+
+function Header(props: HeaderType) {
     return <div className="todoList-header">
-        <h3 className="todoList-header__title">What to Learn</h3>
+        <h3 className="todoList-header__title">{props.title}</h3>
         <div className="todoList-newTaskForm">
             <Input placeholder="New Title" />
             <Button text="Add" />
