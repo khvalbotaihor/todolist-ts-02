@@ -28,7 +28,7 @@ const Button = (props: ButtonType) => {
         [styles.info]: props.type ==="info",
     })
 
-    return <input type="button" value={props.text} className={`${styles.button} ${css}`}/>
+    return <input type="button" value={props.text} className={css}/>
 }
 
 export default Button;
