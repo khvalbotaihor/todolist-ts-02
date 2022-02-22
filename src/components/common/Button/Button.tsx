@@ -3,11 +3,25 @@ import styles from './style.module.css';
 
 type ButtonType = {
     text: string
-    type?: "info"|"danger"|"success"
+    type?: "default"|"info"|"danger"|"success"
 }
 
 const Button = (props: ButtonType) => {
-    return <input type="button" value={props.text} className={styles.button}/>
+    let css = styles.button;
+    if (!props.type || props.type === 'default'){
+        css=''
+    }
+    if (props.type === 'danger'){
+        css = styles.danger
+    }
+    if (props.type === 'info'){
+        css = styles.info
+    }
+    if (props.type === 'success'){
+        css = styles.success
+    }
+
+    return <input type="button" value={props.text} className={`${styles.button} ${css}`}/>
 }
 
 export default Button;
