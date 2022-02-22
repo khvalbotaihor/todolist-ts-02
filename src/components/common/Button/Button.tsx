@@ -3,6 +3,7 @@ import styles from './style.module.css';
 
 type ButtonType = {
     text: string
+    type?: "info"|"danger"|"success"
 }
 
 const Button = (props: ButtonType) => {

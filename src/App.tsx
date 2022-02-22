@@ -13,18 +13,18 @@ function App() {
 
     const tasks1: TaskType[] = [
         {id: v1(), title: 'CSS', isDone: true},
-        {id: v1(), title: 'JS', isDone: true},
+        {id: v1(), title: 'JS', isDone: false},
         {id: v1(), title: 'React', isDone: true},
     ]
     const tasks2: TaskType[] = [
-        {id: v1(), title: 'Bicycle', isDone: true},
+        {id: v1(), title: 'Bicycle', isDone: false},
         {id: v1(), title: 'Bread', isDone: true},
         {id: v1(), title: 'Car', isDone: true},
     ]
     const tasks3: TaskType[] = [
         {id: v1(), title: 'Anger', isDone: true},
         {id: v1(), title: 'Satisfaction', isDone: true},
-        {id: v1(), title: 'Blind', isDone: true},
+        {id: v1(), title: 'Blind', isDone: false},
     ]
 
 
