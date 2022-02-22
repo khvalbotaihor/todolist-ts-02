@@ -6,7 +6,7 @@ type InputType = {
 
 
 const Input = (props: InputType) => {
-    return <input placeholder={props.placeholder}/>
+    return <input placeholder={props.placeholder} type="text" value="blabla"/>
 }
 
 export default Input;

@@ -10,7 +10,7 @@ type ListType = {
 export function List(props: ListType) {
     return <div className={styles.list}>
         {
-            props.tasks.map((el,index) => <Task isDone={el.isDone} title={el.title} key={index}/>)
+            props.tasks.map((el,index) => <Task isDone={el.isDone} title={el.title} key={el.id}/>)
         }
     </div>
 }
